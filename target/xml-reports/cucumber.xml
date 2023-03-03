@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="27.041">
+    <testcase classname="HomePage related features" name="TC01 User_is_looking_for_a_clothe" time="26.729">
+        <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=110.0.5481.178)&#10;Build info: version: '4.4.0', revision: 'e5c75ed026a'&#10;System info: host: 'LAPTOP-VVRCU8JU', ip: '192.168.1.38', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [9bccb8d213b6cd59d8c8c7d3feccc782, findElement {using=xpath, value=/html/body/header/div/div/div[3]/div/a[3]/span/span}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\nurlu\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59895}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59895/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 9bccb8d213b6cd59d8c8c7d3feccc782" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given user goes to URL......................................................passed
+Then verify the page title contains BEYMEN..................................passed
+And user click on searchbox.................................................passed
+Then user types sort on searchbox...........................................passed
+Then user delete the word on the searchbox..................................passed
+Then user types gomlek on searchbox.........................................passed
+Then user do enter for the research.........................................passed
+Then user choose a random product from selection............................passed
+And user verify that he is on the product page..............................passed
+And user select a size......................................................passed
+And user store informations on a file.......................................passed
+Then user clicks on add to bag button.......................................passed
+Then user verify that process is successful.................................failed
+Then user clicks on the bag.................................................skipped
+Then user verify the price of the product in the bag........................skipped
+Then user upgrade the count of product......................................skipped
+Then verify if there are two items in the bag...............................skipped
+And clear the items on the bag..............................................skipped
+Then verify that the bag is empty...........................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=110.0.5481.178)
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-VVRCU8JU', ip: '192.168.1.38', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9bccb8d213b6cd59d8c8c7d3feccc782, findElement {using=xpath, value=/html/body/header/div/div/div[3]/div/a[3]/span/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\nurlu\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59895}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59895/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9bccb8d213b6cd59d8c8c7d3feccc782
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.getText(Unknown Source)
+	at stepdefinitions.ProductPageStepDefs.user_verify_that_process_is_successful(ProductPageStepDefs.java:44)
+	at ✽.user verify that process is successful(file:///C:/Users/nurlu/IdeaProjects/BeymenProject/./src/test/resources/features/homepage.feature:19)
+]]></failure>
+    </testcase>
+</testsuite>
