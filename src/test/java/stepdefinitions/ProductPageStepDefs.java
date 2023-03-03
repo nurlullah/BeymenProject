@@ -1,6 +1,6 @@
 package stepdefinitions;
 
-import io.cucumber.java.en.Then;
+import io.cucumber.java.en.*;
 import org.junit.Assert;
 import pages.ProductDetailsPage;
 import pojos.Gomlek;
@@ -18,14 +18,14 @@ public class ProductPageStepDefs {
         Assert.assertTrue(Driver.getDriver().getTitle().contains(productDetailsPage.productBrand.getText()));
     }
 
-    @Then("user select a size")
+    @When("user select a size")
     public void user_select_a_size() {
 
         ReusableMethods.selectRandomSize(productDetailsPage.productSize);
 
     }
 
-    @Then("user store informations on a file")
+    @And("user store informations on a file")
     public void user_store_informations_on_a_file() {
         gomlek.setName(productDetailsPage.productBrand.getText());
         gomlek.setDescription(productDetailsPage.productDetails.getText());
@@ -34,7 +34,7 @@ public class ProductPageStepDefs {
     }
 
 
-    @Then("user clicks on add to bag button")
+    @And("user clicks on add to bag button")
     public void user_clicks_on_add_to_bag_button() {
         productDetailsPage.addToBasketButton.click();
         Driver.wait(6);
@@ -43,7 +43,7 @@ public class ProductPageStepDefs {
     public void user_verify_that_process_is_successful() {
         Assert.assertTrue(productDetailsPage.basketSize.getText().equals("(1)"));
     }
-    @Then("user clicks on the bag")
+    @When("user clicks on the bag")
     public void user_clicks_on_the_bag() {
         productDetailsPage.goToBasket.click();
     }

@@ -1,6 +1,6 @@
 package stepdefinitions;
 
-import io.cucumber.java.en.Then;
+import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.Select;
 import pages.BasketPage;
@@ -35,7 +35,7 @@ public class BasketStepDefs {
         Assert.assertEquals(sepettekiGomlek.getPrice(),txtFileDakiGomlek.getPrice());
 
     }
-    @Then("user upgrade the count of product")
+    @When("user upgrade the count of product")
     public void user_upgrade_the_count_of_product() {
 
         select.selectByVisibleText("2 adet");
@@ -45,7 +45,7 @@ public class BasketStepDefs {
     public void verify_if_there_are_two_items_in_the_bag() {
         Assert.assertEquals(select.getFirstSelectedOption().getText(),"2 adet");
     }
-    @Then("clear the items on the bag")
+    @When("clear the items on the bag")
     public void clear_the_items_on_the_bag() {
         basketPage.removeItemButton.click();
         Driver.wait(5);

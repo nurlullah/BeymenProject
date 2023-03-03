@@ -258,6 +258,10 @@ public class ReusableMethods {
 
         Random rand = new Random();
         int randomProduct = rand.nextInt(list.size());
+        WebElement size;
+        do{
+            size = list.get(randomProduct);
+        }while (size.getAttribute("class").contains("Ekİndirimde"));
         list.get(randomProduct).click();
     }
 
